@@ -91,8 +91,8 @@ def main():
     import csv
     
     
-    infile = open("inputtemplate-051016.csv", "rt")
-    outfile = open('output-051016.csv', 'wb')# use 'wb' but not 'w' for python2, so that there is no extra lines
+    infile = open("inputtemplate.csv", "rt")
+    outfile = open('output.csv', 'w', newline = '') # use 'w' for python3
 
     s = {}
     f = {}
@@ -116,11 +116,10 @@ def main():
 
     print_csv(outfile, s, f, tc, mc, Dt)
     
-    costcomp(s, f, tc, mc, Dt)
-    populationsize(s, f, tc, mc, Dt)
-    familysize(s, f, tc, mc, Dt)  
+    # costcomp(s, f, tc, mc, Dt)
+    # populationsize(s, f, tc, mc, Dt)
+    # familysize(s, f, tc, mc, Dt)  
    
-    # look for the most efficient stage
     
           
     infile.close
